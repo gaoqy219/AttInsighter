@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attinsighter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* 设置字体 */
+            display: flex; /* 使用Flexbox布局 */
+            flex-direction: column; /* 子元素垂直排列 */
+            align-items: center; /* 水平居中 */
+            justify-content: center; /* 垂直居中 */
+            height: 100vh; /* 使body高度占满整个视口高度 */
+            margin: 0; /* 移除默认的外边距 */
+        }
+        h1 {
+            color: #333; /* 标题颜色 */
+            font-size: 3em; /* 标题大小 */
+            display: flex; /* 使用flex布局 */
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中 */
+            margin-bottom: 10px; /* 标题与说明之间的间距 */
+        }
+        h1 span.beta {
+            font-size: 0.5em; /* Beta文字大小 */
+            margin-left: 10px; /* Beta与标题之间的间距 */
+            color: #888; /* Beta文字颜色 */
+        }
+        p {
+            color: #666; /* 说明文字颜色 */
+            font-size: 1.2em; /* 说明文字大小 */
+            text-align: center; /* 文字居中 */
+            max-width: 600px; /* 限制段落的最大宽度 */
+            line-height: 1.6; /* 增加行高 */
+            margin-bottom: 20px; /* 说明与表单之间的间距 */
+        }
+        form {
+            width: 100%; /* 表单宽度 */
+            max-width: 400px; /* 表单最大宽度 */
+            padding: 20px; /* 表单内边距 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 表单阴影 */
+        }
+        input[type="text"] {
+            width: calc(100% - 22px); /* 输入框宽度 */
+            padding: 10px; /* 输入框内边距 */
+            margin-bottom: 10px; /* 输入框与按钮之间的间距 */
+            border: 1px solid #ccc; /* 输入框边框 */
+            border-radius: 4px; /* 输入框圆角 */
+        }
+        button {
+            width: 100%; /* 按钮宽度 */
+            padding: 10px; /* 按钮内边距 */
+            border: none; /* 移除按钮边框 */
+            background-color: #007bff; /* 按钮背景颜色 */
+            color: white; /* 按钮文字颜色 */
+            border-radius: 4px; /* 按钮圆角 */
+            cursor: pointer; /* 鼠标悬停时显示指针 */
+        }
+        button:hover {
+            background-color: #0056b3; /* 鼠标悬停时按钮背景颜色变化 */
+        }
+    </style>
+</head>
+<body>
+    <h1>Attinsighter<span class="beta">Beta v0.2</span></h1>
+    <p>This tool leverages a powerful language model to analyse and identify the attitude behind text. The tool is still in beta, and if you encounter any internal errors, please try again later.</p>
+    <form method="post" action="/submit">
+        <label for="inputText">Input your text here:</label>
+        <input type="text" id="inputText" name="inputText">
+        <button type="submit">analyse</button>
+    </form>
+    <p>This work was supported by the General Research Fund of the Research Grant Council, Hong Kong SAR, Project No: PolyU 15603621.</p>
+</body>
+</html>
